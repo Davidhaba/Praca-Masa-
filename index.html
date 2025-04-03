@@ -3,47 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Вакансія</title>
+    <meta name="description" content="Вакансія масажиста/масажистки з гнучким графіком і високою зарплатою. Досвід не потрібен!">
+    <meta property="og:title" content="Вакансія: Масажист/Масажистка">
+    <meta property="og:description" content="Приєднуйтесь до нас! Гнучкий графік, висока зарплата, безкоштовне проживання.">
+    <meta property="og:image" content="https://source.unsplash.com/random/1200x630?massage">
+    <title>Oferta pracy | Вакансія</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <h1>Вакансія: [Назва посади]</h1>
-    </header>
+    <div id="loader" class="loader">
+        <div class="spinner"></div>
+    </div>
+    <div class="controls">
+        <div class="language-switcher">
+            <button class="lang-btn" title="Poland" data-lang="pl">PL</button>
+            <button class="lang-btn active" title="Ukraine" data-lang="uk">UK</button>
+        </div>
+    </div>
     <main>
-        <section id="description">
-            <h2>Опис вакансії</h2>
-            <p>[Короткий опис вакансії]</p>
-        </section>
-        <section id="requirements">
-            <h2>Вимоги до кандидатів</h2>
-            <ul>
-                <li>[Вимога 1]</li>
-                <li>[Вимога 2]</li>
-                <li>[Вимога 3]</li>
-            </ul>
-        </section>
-        <section id="benefits">
-            <h2>Переваги</h2>
-            <ul>
-                <li>[Перевага 1]</li>
-                <li>[Перевага 2]</li>
-                <li>[Перевага 3]</li>
-            </ul>
-        </section>
-        <section id="contact">
-            <h2>Зв'яжіться з нами</h2>
-            <p>Якщо ви зацікавлені, будь ласка, зв'яжіться з нами через Telegram, Viber або WhatsApp за номером: <strong>+48 532 611 003</strong></p>
-            <div class="messenger-links">
-                <a href="https://t.me/+48532611003" target="_blank"><i class="fab fa-telegram-plane"></i> Telegram</a>
-                <a href="viber://chat?number=+48532611003" target="_blank"><i class="fab fa-viber"></i> Viber</a>
-                <a href="https://wa.me/48532611003" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-            </div>
-        </section>
+        <div class="content-wrapper">
+            <section id="pl" class="language-content">
+                <h2>Oferta pracy: Masażysta/Masażystka</h2>
+                <p class="subtitle">Możliwe bez doświadczenia</p>
+                <div class="job-details">
+                    <h3>Obowiązki:</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Wykonywanie masaży zgodnie ze standardami</li>
+                        <li><i class="fas fa-check-circle"></i> Chęć nauki i rozwoju umiejętności</li>
+                        <li><i class="fas fa-check-circle"></i> Dyskrecja i profesjonalne podejście</li>
+                        <li><i class="fas fa-check-circle"></i> Dbałość o higienę stanowiska pracy</li>
+                    </ul>
+                    <h3>Warunki:</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Elastyczny grafik pracy</li>
+                        <li><i class="fas fa-check-circle"></i> Bezpłatne zakwaterowanie</li>
+                        <li><i class="fas fa-check-circle"></i> Przyjazne i bezpieczne środowisko</li>
+                        <li><i class="fas fa-check-circle"></i> Wynagrodzenie od 32 zł/godz.</li>
+                    </ul>
+                </div>
+                <p class="call-to-action">Zainteresowany? Skontaktuj się z nami!</p>
+                <div class="messenger-links">
+                    <a href="https://t.me/+48532611003" target="_blank" class="messenger-btn"><i class="fab fa-telegram-plane"></i> Telegram</a>
+                    <a href="viber://chat?number=48532611003" target="_blank" class="messenger-btn"><i class="fab fa-viber"></i> Viber</a>
+                    <a href="https://wa.me/48532611003" target="_blank" class="messenger-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </section>
+            <section id="uk" class="language-content active">
+                <h2>Вакансія: Масажист/Масажистка</h2>
+                <p class="subtitle">Можна без досвіду</p>
+                <div class="job-details">
+                    <h3>Обов’язки:</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Виконання масажів за стандартами</li>
+                        <li><i class="fas fa-check-circle"></i> Бажання навчатися та розвиватися</li>
+                        <li><i class="fas fa-check-circle"></i> Дискретність і повага до клієнтів</li>
+                        <li><i class="fas fa-check-circle"></i> Підтримка чистоти робочого місця</li>
+                    </ul>
+                    <h3>Умови:</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Гнучкий графік роботи</li>
+                        <li><i class="fas fa-check-circle"></i> Безкоштовне проживання</li>
+                        <li><i class="fas fa-check-circle"></i> Комфортне та безпечне середовище</li>
+                        <li><i class="fas fa-check-circle"></i> Зарплата від 32 зл/год.</li>
+                    </ul>
+                </div>
+                <p class="call-to-action">Зацікавило? Пиши нам!</p>
+                <div class="messenger-links">
+                    <a href="https://t.me/+48532611003" target="_blank" class="messenger-btn"><i class="fab fa-telegram-plane"></i> Telegram</a>
+                    <a href="viber://chat?number=+48532611003" target="_blank" class="messenger-btn"><i class="fab fa-viber"></i> Viber</a>
+                    <a href="https://wa.me/48532611003" target="_blank" class="messenger-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </section>
+        </div>
     </main>
-    <footer>
-        <p>&copy; 2023 [Назва компанії]</p>
-    </footer>
+    <button id="back-to-top" title="Return to top"><i class="fas fa-arrow-up"></i></button>
+    
+    <script src="script.js"></script>
 </body>
 </html>
