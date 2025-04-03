@@ -30,4 +30,7 @@ function showLanguage(lang) {
     safeStorage.set('lang', lang);
 }
 
-const safeStorage = { set: (k, v) => { try { localStorage.setItem(k, v) } catch {} }, get: k => { try { return localStorage.getItem(k) } catch { return null } } };
+const safeStorage = { 
+    set: (k, v) => { try { localStorage.setItem(k, v) } catch {} }, 
+    get: k => { try { return localStorage.getItem(k) } catch { return null } } 
+};
