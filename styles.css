@@ -7,12 +7,14 @@
 body {
     font-family: 'Lato', sans-serif;
     background: linear-gradient(135deg, #1e1e2f, #2a2a40);
-    color: #fff;
+    color: #f0f0f0; /* Змінили #fff на #f0f0f0 для кращого контрасту */
     line-height: 1.6;
     overflow-x: hidden;
     position: relative;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); /* Додаємо тінь для тексту */
 }
 
+/* Фоновий ефект */
 body::before {
     content: '';
     position: fixed;
@@ -58,7 +60,7 @@ body::before {
     z-index: 1000;
     display: flex;
     align-items: center;
-    background: rgba(30, 30, 47, 0.7);
+    background: rgba(30, 30, 47, 0.9); /* Збільшили непрозорість */
     padding: 0.5rem;
     border-radius: 25px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -101,12 +103,23 @@ main {
     max-width: 1000px;
     margin: 5rem auto;
     padding: 3rem;
-    background: rgba(25, 36, 85, 0.2);
+    background: rgba(25, 36, 85, 0.9); /* Збільшили непрозорість для контрасту */
     border-radius: 20px;
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(15px);
     position: relative;
     animation: fadeIn 1s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Додаємо тонку межу */
+}
+
+/* Для браузерів, які не підтримують backdrop-filter */
+@supports not (backdrop-filter: blur(15px)) {
+    main {
+        background: rgba(25, 36, 85, 1); /* Повна непрозорість як запасний варіант */
+    }
+    .controls {
+        background: rgba(30, 30, 47, 1);
+    }
 }
 
 .content-wrapper {
@@ -116,6 +129,7 @@ main {
 .language-content {
     display: none;
 }
+
 .language-content.active {
     display: block;
 }
@@ -134,7 +148,7 @@ h2 {
 .subtitle {
     font-size: 1.3rem;
     margin-bottom: 2rem;
-    color: #ddd;
+    color: #e0e0e0; /* Змінили на світліший відтінок для контрасту */
     text-align: center;
 }
 
@@ -151,7 +165,7 @@ ul {
 }
 
 ul li {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15); /* Трохи темніший фон для елементів */
     padding: 1.2rem;
     margin: 0.8rem 0;
     border-radius: 12px;
@@ -180,7 +194,7 @@ ul li i {
 
 ul li:hover {
     transform: translateY(-5px) scale(1.02);
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -188,7 +202,7 @@ ul li:hover {
     font-size: 1.6rem;
     text-align: center;
     margin: 2rem 0 1rem;
-    color: #fff;
+    color: #f0f0f0; /* Змінили на контрастніший колір */
     font-weight: bold;
 }
 
@@ -282,4 +296,4 @@ ul li:hover {
     .call-to-action { font-size: 1.3rem; }
     .lang-btn { padding: 0.5rem 1rem; }
     .messenger-btn { padding: 0.8rem 1.5rem; font-size: 1rem; }
-}
+    }
