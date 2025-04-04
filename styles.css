@@ -70,7 +70,7 @@ body::before {
     z-index: 1000;
     display: flex;
     align-items: center;
-    background: rgba(30, 30, 47, 0.9);
+    background: rgba(30, 30, 47, 0.5);
     padding: 0.5rem;
     border-radius: 25px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -113,22 +113,21 @@ main {
     max-width: 1000px;
     margin: 5rem auto;
     padding: 3rem;
-    background: rgba(25, 36, 85, 0.9);
+    background: rgba(25, 36, 85, 0.4);
     border-radius: 20px;
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(10px);
     position: relative;
     animation: fadeIn 1s ease;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Запасний варіант для браузерів без backdrop-filter */
-@supports not (backdrop-filter: blur(15px)) {
+@supports not (backdrop-filter: blur(10px)) {
     main {
-        background: rgba(25, 36, 85, 1);
+        background: rgba(25, 36, 85, 0.5);
     }
     .controls {
-        background: rgba(30, 30, 47, 1);
+        background: rgba(30, 30, 47, 0.5);
     }
 }
 
@@ -196,6 +195,7 @@ ul li {
 #ul-2 li:nth-child(2) { --i: 6; }
 #ul-2 li:nth-child(3) { --i: 7; }
 #ul-2 li:nth-child(4) { --i: 8; }
+#ul-2 li:nth-child(5) { --i: 9; }
 
 ul li i {
     color: #ffd700;
