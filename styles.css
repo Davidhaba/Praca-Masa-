@@ -6,12 +6,15 @@
 
 body {
     font-family: 'Lato', sans-serif;
-    background: linear-gradient(135deg, #1e1e2f, #2a2a40);
-    color: #f0f0f0; /* Змінили #fff на #f0f0f0 для кращого контрасту */
+    background: linear-gradient(135deg, #1e1e2f, #2a2a40); /* Основний градієнт */
+    background-color: #1e1e2f; /* Запасний колір для сумісності */
+    background-attachment: fixed; /* Фіксуємо фон */
+    color: #f0f0f0;
     line-height: 1.6;
     overflow-x: hidden;
     position: relative;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); /* Додаємо тінь для тексту */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    min-height: 100vh; /* Гарантуємо, що фон покриває весь екран */
 }
 
 /* Фоновий ефект */
@@ -24,6 +27,13 @@ body::before {
     height: 100%;
     background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"%3E%3Cpath fill="rgba(255,215,0,0.1)" fill-opacity="1" d="M0,160L48,170.7C96,181,192,203,288,202.7C384,203,480,181,576,160C672,139,768,117,864,128C960,139,1056,181,1152,197.3C1248,213,1344,203,1392,197.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"%3E%3C/path%3E%3C/svg%3E') no-repeat bottom;
     z-index: -1;
+}
+
+/* Додаємо підтримку для Safari */
+@supports (-webkit-overflow-scrolling: touch) {
+    body {
+        background: #1e1e2f linear-gradient(135deg, #1e1e2f, #2a2a40); /* Явно вказуємо фон для iOS */
+    }
 }
 
 .loader {
@@ -60,7 +70,7 @@ body::before {
     z-index: 1000;
     display: flex;
     align-items: center;
-    background: rgba(30, 30, 47, 0.9); /* Збільшили непрозорість */
+    background: rgba(30, 30, 47, 0.9);
     padding: 0.5rem;
     border-radius: 25px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -103,19 +113,19 @@ main {
     max-width: 1000px;
     margin: 5rem auto;
     padding: 3rem;
-    background: rgba(25, 36, 85, 0.9); /* Збільшили непрозорість для контрасту */
+    background: rgba(25, 36, 85, 0.9);
     border-radius: 20px;
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(15px);
     position: relative;
     animation: fadeIn 1s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Додаємо тонку межу */
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Для браузерів, які не підтримують backdrop-filter */
+/* Запасний варіант для браузерів без backdrop-filter */
 @supports not (backdrop-filter: blur(15px)) {
     main {
-        background: rgba(25, 36, 85, 1); /* Повна непрозорість як запасний варіант */
+        background: rgba(25, 36, 85, 1);
     }
     .controls {
         background: rgba(30, 30, 47, 1);
@@ -148,7 +158,7 @@ h2 {
 .subtitle {
     font-size: 1.3rem;
     margin-bottom: 2rem;
-    color: #e0e0e0; /* Змінили на світліший відтінок для контрасту */
+    color: #e0e0e0;
     text-align: center;
 }
 
@@ -165,7 +175,7 @@ ul {
 }
 
 ul li {
-    background: rgba(255, 255, 255, 0.15); /* Трохи темніший фон для елементів */
+    background: rgba(255, 255, 255, 0.15);
     padding: 1.2rem;
     margin: 0.8rem 0;
     border-radius: 12px;
@@ -202,7 +212,7 @@ ul li:hover {
     font-size: 1.6rem;
     text-align: center;
     margin: 2rem 0 1rem;
-    color: #f0f0f0; /* Змінили на контрастніший колір */
+    color: #f0f0f0;
     font-weight: bold;
 }
 
@@ -296,4 +306,4 @@ ul li:hover {
     .call-to-action { font-size: 1.3rem; }
     .lang-btn { padding: 0.5rem 1rem; }
     .messenger-btn { padding: 0.8rem 1.5rem; font-size: 1rem; }
-    }
+}
