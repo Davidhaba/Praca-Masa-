@@ -4,19 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Вакансія масажиста/масажистки з гнучким графіком і високою зарплатою. Досвід не потрібен!">
-    <meta property="og:title" content="Вакансія: Масажист/Масажистка">
+    <meta name="description" content="Вакансії масажиста/масажистки та адміністратора в масажному салоні у Варшаві.">
+    <meta property="og:title" content="Вакансії: Масажист/Масажистка та Адміністратор">
     <meta property="og:description"
-        content="Приєднуйтесь до нас! Гнучкий графік, висока зарплата, безкоштовне проживання.">
+        content="Приєднуйтесь до нашої команди у Варшаві! Гнучкий графік, висока зарплата, комфортні умови.">
     <meta property="og:image" content="https://source.unsplash.com/random/1200x630?massage">
-    <title>Oferta pracy | Вакансія</title>
+    <title>Oferta pracy | Вакансії</title>
+    <base href="/">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap"
         rel="stylesheet">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.png">
 </head>
 
 <body>
@@ -25,63 +26,43 @@
     </div>
     <div class="controls">
         <div class="language-switcher">
-            <button class="lang-btn" title="Poland" data-lang="pl"><i class="fas fa-globe"></i> PL</button>
-            <button class="lang-btn active" title="Ukraine" data-lang="uk"><i class="fas fa-globe"></i> UK</button>
+            <button class="lang-btn" data-lang="pl"><i class="fas fa-globe"></i> PL</button>
+            <button class="lang-btn active" data-lang="uk"><i class="fas fa-globe"></i> UK</button>
         </div>
     </div>
     <main>
-        <div class="content-wrapper">
-            <section id="pl" class="language-content">
-                <h2>Oferta pracy: Masażysta / Masażystka</h2>
-                <p class="subtitle">Możliwe bez doświadczenia</p>
+        <section id="job-list" class="job-list">
+            <h2 id="job-list-title"></h2>
+            <div class="job-items">
+                <div class="job-item" data-job="masazysta">
+                    <i class="fas fa-hands"></i>
+                    <h3 id="masazysta-title"></h3>
+                    <p id="masazysta-salary"></p>
+                </div>
+                <div class="job-item" data-job="admin">
+                    <i class="fas fa-user-tie"></i>
+                    <h3 id="admin-title"></h3>
+                    <p id="admin-salary"></p>
+                </div>
+            </div>
+        </section>
+
+        <div class="job-details-wrapper">
+            <button id="back-to-list"><i class="fas fa-arrow-left"></i> <span id="back-to-list-text"></span></button>
+            <section id="job-details" class="job-details-content">
+                <h2 id="job-title"></h2>
+                <p id="job-subtitle" class="subtitle"></p>
                 <div class="job-details">
-                    <h3>Obowiązki:</h3>
-                    <ul id="ul-1">
-                        <li><i class="fas fa-hands"></i> Wykonywanie masaży zgodnie ze standardami</li>
-                        <li><i class="fas fa-book-open"></i> Chęć nauki i rozwoju umiejętności</li>
-                        <li><i class="fas fa-user-shield"></i> Dyskrecja i profesjonalne podejście</li>
-                        <li><i class="fas fa-broom"></i> Dbałość o higienę stanowiska pracy</li>
-                    </ul>
-                    <h3>Warunki:</h3>
-                    <ul id="ul-2">
-                        <li><i class="fas fa-calendar-alt"></i> Elastyczny grafik pracy</li>
-                        <li><i class="fas fa-home"></i> Bezpłatne zakwaterowanie</li>
-                        <li><i class="fas fa-shield-alt"></i> Przyjazne i bezpieczne środowisko</li>
-                        <li><i class="fas fa-money-bill-wave"></i> Wynagrodzenie od 32 zł/godz.</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Miejsce pracy: Warszawa</li>
-                    </ul>
+                    <h3 id="duties-title"></h3>
+                    <ul id="duties-list"></ul>
+                    <h3 id="requirements-title"></h3>
+                    <ul id="requirements-list"></ul>
+                    <h3 id="conditions-title"></h3>
+                    <ul id="conditions-list"></ul>
+                    <h3 id="about-title"></h3>
+                    <p id="about-text"></p>
                 </div>
-                <p class="call-to-action">Zainteresowany? Skontaktuj się z nami!</p>
-                <div class="messenger-links">
-                    <a href="https://t.me/+48532611003" target="_blank" class="messenger-btn telegram"><i
-                            class="fab fa-telegram-plane"></i> Telegram</a>
-                    <a href="viber://chat?number=+48532611003" target="_blank" class="messenger-btn viber"><i
-                            class="fab fa-viber"></i> Viber</a>
-                    <a href="https://wa.me/48532611003" target="_blank" class="messenger-btn whatsapp"><i
-                            class="fab fa-whatsapp"></i> WhatsApp</a>
-                </div>
-            </section>
-            <section id="uk" class="language-content active">
-                <h2>Вакансія: Масажист/Масажистка</h2>
-                <p class="subtitle">Можна без досвіду</p>
-                <div class="job-details">
-                    <h3>Обов’язки:</h3>
-                    <ul id="ul-1">
-                        <li><i class="fas fa-hands"></i> Виконання масажів за стандартами</li>
-                        <li><i class="fas fa-book-open"></i> Бажання навчатися та розвиватися</li>
-                        <li><i class="fas fa-user-shield"></i> Дискретність і повага до клієнтів</li>
-                        <li><i class="fas fa-broom"></i> Підтримка чистоти робочого місця</li>
-                    </ul>
-                    <h3>Умови:</h3>
-                    <ul id="ul-2">
-                        <li><i class="fas fa-calendar-alt"></i> Гнучкий графік роботи</li>
-                        <li><i class="fas fa-home"></i> Безкоштовне проживання</li>
-                        <li><i class="fas fa-shield-alt"></i> Комфортне та безпечне середовище</li>
-                        <li><i class="fas fa-money-bill-wave"></i> Зарплата від 32 зл/год.</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Місце роботи: Варшава</li>
-                    </ul>
-                </div>
-                <p class="call-to-action">Зацікавило? Пиши нам!</p>
+                <p id="call-to-action" class="call-to-action"></p>
                 <div class="messenger-links">
                     <a href="https://t.me/+48532611003" target="_blank" class="messenger-btn telegram"><i
                             class="fab fa-telegram-plane"></i> Telegram</a>
@@ -94,7 +75,6 @@
         </div>
     </main>
     <button id="back-to-top" title="Return to top"><i class="fas fa-arrow-up"></i></button>
-
     <script src="script.js"></script>
 </body>
 
