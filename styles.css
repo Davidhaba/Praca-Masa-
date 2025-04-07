@@ -361,6 +361,52 @@ ul li:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
 }
 
+#back-to-list {
+    display: inline-flex;
+    position: sticky;
+    top: 25px;
+    z-index: 1;
+    align-items: center;
+    padding: 10px 15px;
+    max-width: 40px;
+    height: 40px;
+    background-color: gold;
+    color: #1e1e2f;
+    border: none;
+    border-radius: 25px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+#back-to-list i {
+    margin-right: 10px;
+}
+#back-to-list span {
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+#back-to-list:hover span {
+    opacity: 1;
+}
+#back-to-list:hover {
+    max-width: 300px;
+}
+
+#about-text {
+    background: rgba(255, 255, 255, .1);
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    line-height: 1.8;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -411,6 +457,13 @@ ul li:hover {
     .job-item {
         width: 100%;
     }
+
+    #back-to-list span {
+        opacity: 1;
+    }
+    #back-to-list {
+        max-width: 300px;
+    }
 }
 
 @media (max-width:480px) {
@@ -434,50 +487,4 @@ ul li:hover {
         padding: .8rem 1.5rem;
         font-size: 1rem;
     }
-}
-
-#back-to-list {
-    display: inline-flex;
-    position: sticky;
-    top: 30px;
-    z-index: 1;
-    align-items: center;
-    padding: 10px 20px;
-    width: 50px;
-    height: 50px;
-    background-color: gold;
-    color: #1e1e2f;
-    border: none;
-    border-radius: 25px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: .3s;
-    margin-bottom: 20px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
-}
-#back-to-list i {
-    margin-right: 10px;
-}
-#back-to-list span {
-    opacity: 0;
-    width: 0;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-#back-to-list:hover span {
-    opacity: 1;
-    width: auto;
-}
-#back-to-list:hover {
-    width: 180px;
-}
-
-#about-text {
-    background: rgba(255, 255, 255, .1);
-    padding: 20px;
-    border-radius: 15px;
-    font-size: 1.1rem;
-    color: #e0e0e0;
-    line-height: 1.8;
 }
