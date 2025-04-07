@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const translations = {
     pl: {
       jobListTitle: 'Lista ofert pracy',
+      jobListSubtitle: 'Wybierz ofertę pracy z listy poniżej',
       masazystaTitle: 'Masażysta / Masażystka',
       masazystaSalary: 'od 32 zł/godz.',
       adminTitle: 'Administrator salonu masażu',
@@ -85,6 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     uk: {
       jobListTitle: 'Список вакансій',
+      jobListSubtitle: 'Виберіть вакансію зі списку нижче',
       masazystaTitle: 'Масажист / Масажистка',
       masazystaSalary: 'від 32 зл/год.',
       adminTitle: 'Адміністратор масажного салону',
@@ -167,6 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateTexts(lang) {
     const t = translations[lang];
     document.getElementById('job-list-title').textContent = t.jobListTitle;
+    document.getElementById('job-list-subtitle').textContent = t.jobListSubtitle;
     document.getElementById('masazysta-title').textContent = t.masazystaTitle;
     document.getElementById('masazysta-salary').textContent = t.masazystaSalary;
     document.getElementById('admin-title').textContent = t.adminTitle;
@@ -239,9 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function handlePath() {
     const path = window?.location?.pathname;
-    if (path === '/' || path === '') {
-      showJobList();
-    } else if (path === '/masazysta') {
+    if (path === '/masazysta') {
       showJob('masazysta');
     } else if (path === '/administrator') {
       showJob('admin');
