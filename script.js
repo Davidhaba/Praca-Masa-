@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.job-item').forEach((item) => {
     item.addEventListener('click', () => {
       const jobId = item.getAttribute('data-job');
-      showJob(jobId);
+      if (jobId) showJob(jobId);
     });
   });
 

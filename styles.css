@@ -107,7 +107,8 @@ body::before {
     transform: scale(1.1);
 }
 
-.lang-btn:hover {
+.lang-btn:hover,
+.lang-btn:focus {
     transform: scale(1.1);
     box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
 }
@@ -165,6 +166,7 @@ main {
 .job-item {
     background: rgba(255, 255, 255, .1);
     padding: 2rem;
+    border: none;
     border-radius: 15px;
     width: 300px;
     text-align: center;
@@ -172,10 +174,16 @@ main {
     transition: .3s;
 }
 
-.job-item:hover {
+.job-item:hover,
+.job-item:focus {
     transform: translateY(-5px);
     background: rgba(255, 255, 255, .2);
     box-shadow: 0 8px 20px rgba(0, 0, 0, .2);
+    outline: none;
+}
+
+.job-item:focus {
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.5);
 }
 
 .job-item i {
@@ -202,29 +210,6 @@ main {
 .job-details-wrapper.active {
     display: block;
     animation: .5s fadeIn;
-}
-
-.back-btn {
-    background: linear-gradient(135deg, gold, #fc0);
-    color: #1e1e2f;
-    border: none;
-    padding: .8rem 1.5rem;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: 700;
-    transition: .3s;
-    margin-bottom: 2rem;
-    display: inline-flex;
-    align-items: center;
-}
-
-.back-btn i {
-    margin-right: .5rem;
-}
-
-.back-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
 }
 
 .job-details-content h2 {
@@ -336,7 +321,8 @@ ul li:hover {
     margin-right: .5rem;
 }
 
-.messenger-btn:hover {
+.messenger-btn:hover,
+.messenger-btn:focus {
     transform: scale(1.05);
     box-shadow: 0 10px 25px rgba(0, 0, 0, .3);
 }
@@ -356,7 +342,8 @@ ul li:hover {
     z-index: 1000;
 }
 
-#back-to-top:hover {
+#back-to-top:hover,
+#back-to-top:focus {
     transform: scale(1.1);
     box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
 }
@@ -391,10 +378,12 @@ ul li:hover {
     overflow: hidden;
     transition: all 0.3s;
 }
-#back-to-list:hover span {
+#back-to-list:hover span,
+#back-to-list:focus span {
     opacity: 1;
 }
-#back-to-list:hover {
+#back-to-list:hover,
+#back-to-list:focus {
     max-width: 300px;
 }
 
