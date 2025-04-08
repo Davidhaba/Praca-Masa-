@@ -316,7 +316,7 @@ ul li:hover {
     border-radius: 50px;
     font-size: 1.2rem;
     font-weight: 700;
-    transition: .4s;
+    transition: .3s;
     box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
 }
 
@@ -337,7 +337,7 @@ ul li:hover {
 }
 
 .messenger-btn:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     box-shadow: 0 10px 25px rgba(0, 0, 0, .3);
 }
 
@@ -456,13 +456,6 @@ ul li:hover {
 
     .job-item {
         width: 100%;
-    }
-
-    #back-to-list span {
-        opacity: 1;
-    }
-    #back-to-list {
-        max-width: 300px;
     }
 }
 

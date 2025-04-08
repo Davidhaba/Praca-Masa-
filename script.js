@@ -10,11 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
       masazystaTitle: 'Masażysta / Masażystka',
       masazystaSalary: 'od 32 zł/godz.',
       adminTitle: 'Administrator salonu masażu',
-      adminSalary: '7000-14 000 zł/miesiąc',
+      adminSalary: 'do 14 000 zł/miesiąc',
       backToList: 'Wróć do listy',
       callToAction: 'Zainteresowany? Skontaktuj się z nami!',
       masazysta: {
-        title: 'Masażysta/Masażystka',
+        title: 'Masażysta / Masażystka',
         subtitle: 'Możliwe bez doświadczenia',
         dutiesTitle: 'Obowiązki',
         duties: [
@@ -90,11 +90,11 @@ document.addEventListener('DOMContentLoaded', () => {
       masazystaTitle: 'Масажист / Масажистка',
       masazystaSalary: 'від 32 зл/год.',
       adminTitle: 'Адміністратор масажного салону',
-      adminSalary: '7000-14 000 зл/місяць',
+      adminSalary: 'до 14 000 зл/місяць',
       backToList: 'Повернутися до списку',
       callToAction: 'Зацікавило? Пиши нам!',
       masazysta: {
-        title: 'Масажист/Масажистка',
+        title: 'Масажист / Масажистка',
         subtitle: 'Можна без досвіду',
         dutiesTitle: 'Обов’язки',
         duties: [
@@ -145,10 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
           { icon: 'fas fa-arrow-up', text: 'Можливість професійного росту' },
           { icon: 'fas fa-map-marker-alt', text: 'Місце роботи: Варшава' },
           { icon: 'fas fa-clock', text: 'Тип зайнятості: Повна зайнятість / Позмінна робота' },
-          {
-            icon: 'fas fa-money-bill-wave',
-            text: 'Зарплата: 7000-14 000 зл/місяць + бонусна система',
-          },
+          { icon: 'fas fa-money-bill-wave', text: 'Зарплата: 7000-14 000 зл/місяць + бонусна система' },
         ],
         aboutTitle: 'Про нас',
         aboutText:
